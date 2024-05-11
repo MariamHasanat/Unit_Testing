@@ -1,30 +1,39 @@
-function calc(num1, operator, num2) {
+function calc(number1, operator, number2) {
     let result;
-    let number1 = Number(num1);
-    let number2 = Number(num2);
+    if (((typeof number1) === "string") || ((typeof number1) === "string")) {
+        throw Error("Invalid input type");
+    }
+    
     switch (operator) {
         case '+':
             result = number1 + number2;
+            console.log(result);
             break;
         case '-':
             result = number1 - number2;
+            console.log(result);
             break;
         case '*':
             result = number1 * number2;
+            console.log(result);
             break;
         case '/':
             if (number2 === 0) {
                 throw Error('Division by zero');
             } else {
                 result = number1 / number2;
+                console.log(result);
             }
-            return result; 
+            return result;
 
         default:
-            break;
+            throw Error('Invalid operator')
     }
 }
 
-console.log('enter number');
-
-calc(exp);
+calc(3, '+', 3.5);
+calc(3, '-', 3.5);
+calc(3, '*', 3.5);
+calc(3, '/', 3.5);
+calc(3, '$', 3.5);
+calc('0', '+', 3.5);

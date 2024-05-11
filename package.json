@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node calculator.js",
     "test": "nodemon index.js"
   },
   "author": "Mariam Hasanat",
