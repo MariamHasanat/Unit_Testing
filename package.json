@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "node calculator.js",
-    "test": "nodemon index.js"
+    "test": "jest"
   },
   "author": "Mariam Hasanat",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }
